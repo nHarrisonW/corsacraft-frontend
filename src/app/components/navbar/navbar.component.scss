@@ -1,0 +1,40 @@
+
+@import '../../../scss/universal.scss';
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: 12px 0;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid $border;
+    .nav-logo{
+        height: 100px;
+    }
+    .my-nav{
+        a{
+            
+        }
+        color: black;
+        margin-right: 12px;
+    }
+    .corsacraft{
+        font-size: 20px;
+    }
+    .my-inp{
+        input,
+        button{
+        border: 1px solid $border;
+        }        
+        input{
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border-right: none;
+        }
+        button{
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+    }
+}

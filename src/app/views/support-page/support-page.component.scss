@@ -1,0 +1,45 @@
+
+@import '../../../scss/universal';
+.support-parent{
+
+    display: flex;
+    justify-content: space-between;
+
+
+    .support-form-parent{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding-right: 10px;
+        .my-label{
+            display: inline-block;
+        }
+    }
+    .address-parent{
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid $border;
+        padding-top: 12px;
+        margin-bottom: 12px;
+        p{
+            margin: 0;
+        }
+        h3{
+            font-family: 'Russo one';
+        }
+        a{
+            color: black;
+        }
+
+    }
+    .address-area{
+        padding-left: 10px;
+        border-left: 1px solid $border;
+    }
+}
+
+.support-guest{
+    display: flex;
+    width: 50%;
+
+}

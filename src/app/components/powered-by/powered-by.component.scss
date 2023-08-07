@@ -1,0 +1,18 @@
+@import '../../../scss/universal';
+
+.powered-parent{
+    padding: 12px;
+    .logos{
+        height: 100px;
+        object-fit: contain;
+    }
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    // align-items: center;
+    h1{
+        white-space: nowrap;
+        font-size: 24px;
+    }
+
+}

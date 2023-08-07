@@ -1,0 +1,30 @@
+$border: #d0d4d9;
+
+.corsacraft {
+  color: #00359b;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+.russo-one {
+  font-family: "Russo One", sans-serif;
+}
+.page-title {
+  font-family: "Russo One", sans-serif;
+}
+.my-form {
+  border: 1px solid $border;
+  border-radius: 8px;
+}
+.form-container{
+            display: flex;
+            flex-direction: column;
+}
+
+// ADS
+.rectangle-ad {
+  img {
+    width: 240px;
+  }
+}
