@@ -1,0 +1,33 @@
+.card-body-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+
+  
+  .card-half{
+    display: grid;
+    gap: 12px;
+  }
+
+  .opposite{
+    .card-piece{
+        flex-direction: row-reverse;
+        text-align:end;
+    }
+  }
+  .card-piece {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: end;
+    font-weight: 300;
+    img {
+      height: 32px;
+    }
+  }
+}
+
+.card-piece.opposite {
+  display: flex;
+  flex-direction: row-reverse;
+}

@@ -1,4 +1,4 @@
-
+@import '../scss/universal';
 
 .large-leaderboard{
     display: flex;
@@ -12,5 +12,14 @@
 .skyscraper-ad{
     img{
         width: 120px;
+    }
+}
+
+
+@media (max-width: 970px){
+    .large-leaderboard{
+        img{
+            width: 100%;
+        }
     }
 }

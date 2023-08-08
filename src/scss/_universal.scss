@@ -1,30 +1,66 @@
 $border: #d0d4d9;
 
-.corsacraft {
-  color: #00359b;
-}
+// BY USING NG-DEEP, WE SHOULD NO LONGER NEED TO IMPORT AT THE TOP OF OUR .SCSS
+::ng-deep{
+    .corsacraft {
+        color: #00359b;
+      }
+      
+      .roboto {
+        font-family: "Roboto", sans-serif;
+      }
+      .russo-one {
+        font-family: "Russo One", sans-serif;
+      }
+      .page-title {
+        font-family: "Russo One", sans-serif;
+    }
+    .page-heading{
+          font-family: "Russo One", sans-serif;
+        font-size: 20px;
+      }
+      .my-form {
+        border: 1px solid $border;
+        border-radius: 8px;
+      }
+      .form-container{
+                  display: flex;
+                  flex-direction: column;
+      }
 
-.roboto {
-  font-family: "Roboto", sans-serif;
-}
-.russo-one {
-  font-family: "Russo One", sans-serif;
-}
-.page-title {
-  font-family: "Russo One", sans-serif;
-}
-.my-form {
-  border: 1px solid $border;
-  border-radius: 8px;
-}
-.form-container{
-            display: flex;
-            flex-direction: column;
-}
+      .model,
+      .my-label{
+        font-weight: 300;
+      }
+      
+    //   HOME-CARDS
+    .card-parent{
+        border: 1px solid $border;
+        padding: 20px;
+        display: table;
 
-// ADS
-.rectangle-ad {
-  img {
-    width: 240px;
-  }
+        .card-heading{
+            font-weight: 500;
+        }
+
+        .author{
+            text-align: end;
+        }
+    }
+      
+      // ADS
+      .rectangle-ad {
+          cursor: pointer;
+        img {
+          width: 240px;
+        }
+      }
+      .full-banner-ad{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 468px;
+        }
+      }
+
 }

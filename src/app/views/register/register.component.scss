@@ -8,6 +8,8 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
 
+    width: 100%;
+
 }
 .checkboxes{
     display: grid;
@@ -16,6 +18,6 @@
     
     align-items: center;
     justify-content: center;
-
+    text-align: center;
 
 }

@@ -1,5 +1,17 @@
 
 
 <div class="home-parent">
-    
+    <div class="page-heading">
+        Featured
+    </div>
+    <div class="home-grid">
+        <app-home-card [post]="featuredPosts" *ngFor="let item of getFeaturedPosts()"></app-home-card>
+    </div>
+
+    <div class="page-heading">
+        Latest
+    </div>
+    <div class="home-grid">
+        <app-home-card [post]="getLatestPosts()" *ngFor="let item of getLatestPosts()"></app-home-card>
+    </div>
 </div>

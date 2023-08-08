@@ -1,1 +1,14 @@
-<p>about-us works!</p>
+
+
+
+<div class="about-us-grid">
+    <div class="body-cont roboto" *ngFor="let item of about_us_page">
+        <div class="page-heading" [innerHTML]="item.heading"></div>
+        <div class="paragraph" [innerHTML]="item.paragraph"></div>
+    </div>
+</div>
+Thank you for being a part of our community, and happy racing!
+<div class="d-flex justify-content-between mt-3 page-heading">
+    THE CORSACRAFT TEAM,
+    <img src="https://imgur.com/n90PSi4.png" alt="" class="logo">
+</div>

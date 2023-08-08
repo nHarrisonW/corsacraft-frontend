@@ -1,1 +1,80 @@
-<p>home-card works!</p>
+
+
+<div class="card-parent roboto">
+    <div class="card-hero">
+        <img [src]="post.imgs[0].src" alt="">
+    </div>
+    <div class="card-heading">
+        {{post.name}}
+
+        <!-- OR -->
+
+        {{post.year}} {{post.make}} <span class="model">{{post.model}}</span>
+    </div>
+    <div class="card-body-grid">
+        <div class="card-half">
+
+            <ng-container *ngIf="post.car">    
+            <!-- PIECES OF CAR, USE NGIF-->
+        <div class="card-piece">
+            {{post.horespower}}
+            <img src="https://imgur.com/UrMvkAj.png" alt="">
+        </div>
+        <div class="card-piece">
+            {{post.transmission}}
+            <img src="https://imgur.com/iUlsfb6.png" alt="">
+        </div>
+        <div class="card-piece">
+            {{post.drivetrain}}
+            <img src="https://imgur.com/1CuQqpL.png" alt="">
+        </div>
+        <div class="card-piece">
+            {{post.type}}
+            <img src="https://imgur.com/5y02OQC.png" alt="">
+        </div>
+    </ng-container>
+
+        <!-- PIECES OF TRACK, USE NGIF-->
+        <div class="card-piece">
+            {{post.country}}
+            <img src="https://flagsapi.com/{{post.country}}/flat/64.png" alt="">
+        </div>
+        <div class="card-piece">
+            {{post.length}}
+            <img src="https://imgur.com/WbQtRiP.png" alt="">
+        </div>
+        <div class="card-piece">
+            {{post.turn_count}}
+            <img src="https://imgur.com/7JVMxs9.png" alt="">
+        </div>
+        <div class="card-piece">
+            {{post.type}}
+            <img src="https://imgur.com/pz40nEU.png" alt="">
+        </div>
+
+        </div>
+
+        <div class="card-half opposite">
+            <div class="card-piece">
+                <p>{{post.file_size}}</p>
+                <img src="https://imgur.com/1CuQqpL.png" alt="">
+            </div>
+
+            <div class="card-piece">
+                {{post.rating}}
+            </div>
+
+            <div class="card-piece">
+                {{post.downloads}}
+                <img src="https://imgur.com/b4TwPYv.png" alt="">
+            </div>
+
+            <div class="card-piece">
+                {{post.featured? 'Featured':'not'}}
+            </div>
+        </div>
+
+        <p class="tags">{{post.tags}}</p>
+        <p class="author">{{post.author}}</p>
+    </div>
+</div>

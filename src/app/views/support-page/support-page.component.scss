@@ -33,13 +33,16 @@
 
     }
     .address-area{
-        padding-left: 10px;
         border-left: 1px solid $border;
+        div{
+            padding-left: 10px;
+        }
     }
 }
 
 .support-guest{
     display: flex;
     width: 50%;
+    justify-content: space-between;
 
 }

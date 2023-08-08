@@ -1,1 +1,23 @@
-<p>faq-page works!</p>
+
+<div class="page-title">
+    <h1>FAQ's</h1>
+</div>
+<div class="d-flex">
+
+    <ol class="faq-list roboto" type="1">
+        <ng-container *ngFor="let item of faq_page; let i=index;">
+            <li class="question">{{item.question}}</li>
+            <ol class="sub-list" type="a">
+                <div class="d-flex">
+                    <li class="answer">{{item.answer}}</li>
+                </div>
+            </ol>
+        </ng-container>
+    </ol>
+    <div>
+        <div class="rectangle-ad ps-3">
+            <img src="https://imgur.com/J147B6P.png" alt="" />
+        </div>
+        <app-powered-by></app-powered-by>
+    </div>
+</div>
