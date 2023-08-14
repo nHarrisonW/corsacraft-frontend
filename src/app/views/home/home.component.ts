@@ -8,9 +8,12 @@ import { PostServiceService } from 'src/app/services/post-service.service';
 })
 export class HomeComponent {
   allPosts:any[]=[];
-  featuredPosts:any[]=[];
-  latestPosts:any[]=[];
-constructor(private postService:PostServiceService){
+  featuredPosts:any[]=this.postService.posts.filter(posts=>posts.featured);
+  latestPosts:any[]=this.postService.getPosts();
+  allCars:any[]=this.postService.getCars();
+  allTracks:any[]=this.postService.getTracks();
+
+  constructor(private postService:PostServiceService){
   // this.featuredPosts=this.getFeaturedPosts();
   // this.latestPosts=this.getLatestPosts();
 
@@ -18,12 +21,17 @@ constructor(private postService:PostServiceService){
 
 }
 getFeaturedPosts():any[]{
-  return this.postService.posts.filter(post => post.featured)
-  console.log(this.postService.posts);
+  return this.allPosts.filter(post => post.featured)
 }
 getLatestPosts():any[]{
   const latestPosts = this.postService.posts;
   return this.postService.posts;
-
 }
+getTracks():any[]{
+  return this.allTracks;
+}
+getCars():any[]{
+  return this.allCars;
+}
+
 }

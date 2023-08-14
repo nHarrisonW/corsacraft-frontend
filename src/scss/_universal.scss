@@ -36,15 +36,35 @@ $border: #d0d4d9;
     //   HOME-CARDS
     .card-parent{
         border: 1px solid $border;
-        padding: 20px;
         display: table;
+
+        .card-pad{
+        padding: 20px;
+        }
 
         .card-heading{
             font-weight: 500;
         }
 
         .author{
+          color: grey;
             text-align: end;
+        }
+        .card-hero{
+          width: 100%;
+          height: 180px;
+          object-fit: cover;
+          object-position: bottom;
+        }
+        .featured{
+          color: #F91616;
+          display: inline-block !important;
+        }
+        .filesize{
+          color: #0FC000;
+        }
+        b{
+          font-weight: 600;
         }
     }
       

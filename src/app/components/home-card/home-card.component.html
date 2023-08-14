@@ -1,15 +1,21 @@
 
 
 <div class="card-parent roboto">
-    <div class="card-hero">
-        <img [src]="post.imgs[0].src" alt="">
+    <!-- HERO IMG -->
+    <div>
+        <img class="card-hero" [src]="post.imgs[0].src" alt="">
     </div>
+    
+    <div class="card-pad">
+    <!-- TITLE -->
     <div class="card-heading">
-        {{post.name}}
-
+        <ng-container *ngIf="!post.car">
+            {{post.name}}
+        </ng-container>
         <!-- OR -->
-
-        {{post.year}} {{post.make}} <span class="model">{{post.model}}</span>
+        <ng-container *ngIf="post.car">
+            {{post.year}} {{post.make}} <span class="model">{{post.model}}</span>
+        </ng-container>
     </div>
     <div class="card-body-grid">
         <div class="card-half">
@@ -17,64 +23,66 @@
             <ng-container *ngIf="post.car">    
             <!-- PIECES OF CAR, USE NGIF-->
         <div class="card-piece">
-            {{post.horespower}}
+            <p><b>{{post.horsepower}} HP</b></p>
             <img src="https://imgur.com/UrMvkAj.png" alt="">
         </div>
         <div class="card-piece">
-            {{post.transmission}}
+            <p><b>{{post.transmission}}</b></p>
             <img src="https://imgur.com/iUlsfb6.png" alt="">
         </div>
         <div class="card-piece">
-            {{post.drivetrain}}
+            <p><b>{{post.drivetrain}}</b></p>
             <img src="https://imgur.com/1CuQqpL.png" alt="">
         </div>
         <div class="card-piece">
-            {{post.type}}
+            <p><b>{{post.type}}</b></p>
             <img src="https://imgur.com/5y02OQC.png" alt="">
         </div>
     </ng-container>
 
         <!-- PIECES OF TRACK, USE NGIF-->
-        <div class="card-piece">
-            {{post.country}}
-            <img src="https://flagsapi.com/{{post.country}}/flat/64.png" alt="">
-        </div>
-        <div class="card-piece">
-            {{post.length}}
-            <img src="https://imgur.com/WbQtRiP.png" alt="">
-        </div>
-        <div class="card-piece">
-            {{post.turn_count}}
-            <img src="https://imgur.com/7JVMxs9.png" alt="">
-        </div>
-        <div class="card-piece">
-            {{post.type}}
-            <img src="https://imgur.com/pz40nEU.png" alt="">
-        </div>
-
+        <ng-container *ngIf="!post.car">
+            <div class="card-piece">
+                <p><b>{{post.country}}</b></p>
+                <img src="https://flagsapi.com/{{post.country}}/flat/32.png" alt="">
+            </div>
+            <div class="card-piece">
+                <p><b>{{post.length}}</b></p>
+                <img src="https://imgur.com/WbQtRiP.png" alt="">
+            </div>
+            <div class="card-piece">
+                <p><b>{{post.turns}}</b></p>
+                <img src="https://imgur.com/7JVMxs9.png" alt="">
+            </div>
+            <div class="card-piece">
+                <p><b>{{post.type}}</b></p>
+                <img src="https://imgur.com/pz40nEU.png" alt="">
+            </div>
+        </ng-container>
+        <p class="tags">{{post.tags}}</p>
         </div>
 
         <div class="card-half opposite">
             <div class="card-piece">
-                <p>{{post.file_size}}</p>
-                <img src="https://imgur.com/1CuQqpL.png" alt="">
+                <p class="filesize">{{post.file_size}}</p>
             </div>
 
             <div class="card-piece">
-                {{post.rating}}
+                <ngb-rating [(rate)]="post.rating" [readonly]="true" [max]="5"></ngb-rating>
             </div>
 
             <div class="card-piece">
-                {{post.downloads}}
+                <p>{{post.downloads}}</p>
                 <img src="https://imgur.com/b4TwPYv.png" alt="">
             </div>
 
-            <div class="card-piece">
-                {{post.featured? 'Featured':'not'}}
+            <div class="card-piece featured">
+                <p>{{post.featured? 'Featured':''}}</p>
             </div>
+        <p class="author">{{post.author}}</p>
         </div>
 
-        <p class="tags">{{post.tags}}</p>
-        <p class="author">{{post.author}}</p>
     </div>
+</div>
+
 </div>

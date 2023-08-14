@@ -5,13 +5,13 @@
         Featured
     </div>
     <div class="home-grid">
-        <app-home-card [post]="featuredPosts" *ngFor="let item of getFeaturedPosts()"></app-home-card>
+        <app-home-card [post]="featuredPosts[i]" *ngFor="let item of getFeaturedPosts();let i=index;"></app-home-card>
     </div>
 
     <div class="page-heading">
         Latest
     </div>
     <div class="home-grid">
-        <app-home-card [post]="getLatestPosts()" *ngFor="let item of getLatestPosts()"></app-home-card>
+        <app-home-card [post]="latestPosts[i]" *ngFor="let item of getLatestPosts(); let i=index;"></app-home-card>
     </div>
 </div>

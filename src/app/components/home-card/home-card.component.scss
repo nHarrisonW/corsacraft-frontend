@@ -1,12 +1,19 @@
+
+
 .card-body-grid {
+  // THESE ARE SOME STYLE ELEMENTS, THE REST OF THE CARDS SCSS SHOULD BE DONE IN _universal.scss
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  gap: 20px;
+  p{
+    margin: 0;
+    white-space: nowrap;
+  }
 
   
   .card-half{
     display: grid;
-    gap: 12px;
+    gap: 8px;
   }
 
   .opposite{
@@ -15,14 +22,18 @@
         text-align:end;
     }
   }
+ 
   .card-piece {
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: end;
     font-weight: 300;
+    height: 100%;
     img {
+      width: 32px;
       height: 32px;
+      object-fit: contain;
     }
   }
 }
